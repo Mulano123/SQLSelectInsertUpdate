@@ -67,10 +67,5 @@ namespace SQLSelectInsertUpdate
             sqlConnect.Close();
             return true;
         }
-
-
-
     }
-
-  
 }
