@@ -26,9 +26,9 @@ namespace SQLSelectInsertUpdate
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtStudentID.Text) || (String.IsNullOrEmpty(txtFirstName.Text) || 
-                (String.IsNullOrEmpty(txtMiddleName.Text) || (String.IsNullOrEmpty(txtLastName.Text) || 
-                (String.IsNullOrEmpty(txtAge.Text) || (cmbGender.SelectedIndex == -1) || (cmbProgram.SelectedIndex == -1))))))
+            if (String.IsNullOrEmpty(txtStudentID.Text) && (String.IsNullOrEmpty(txtFirstName.Text) && 
+                (String.IsNullOrEmpty(txtMiddleName.Text) && (String.IsNullOrEmpty(txtLastName.Text) && 
+                (String.IsNullOrEmpty(txtAge.Text) && (cmbGender.SelectedIndex == -1) && (cmbProgram.SelectedIndex == -1))))))
             {
                 MessageBox.Show("Please fill up the Form to Register!!");
             }

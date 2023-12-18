@@ -89,7 +89,8 @@ namespace SQLSelectInsertUpdate
             using(SqlConnection sqlConnect = new SqlConnection(clubRegistrationQuery.connectionString))
             {
                 sqlConnect.Open();
-                string updateQuery = "UPDATE ClubMembers SET FirstName = @FirstName, MiddleName = @MiddleName, LastName = @LastName, Age = @Age, Gender = @Gender, Program = @Program WHERE StudentId = '" + value + "'";
+                string updateQuery = "UPDATE ClubMembers SET FirstName = @FirstName, MiddleName = @MiddleName, LastName = @LastName, " +
+                                     "Age = @Age, Gender = @Gender, " +"Program = @Program WHERE StudentId = '" + value + "'";
                 cmd = new SqlCommand(updateQuery, sqlConnect);
                 cmd.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
                 cmd.Parameters.AddWithValue("@MiddleName", txtMiddleName.Text);
